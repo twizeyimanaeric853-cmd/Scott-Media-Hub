@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Scott Media Hub</title>
+<meta name="description" content="Get in touch with Scott Media Hub.">
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="canonical" href="https://twizeyimanaeric853-cmd.github.io/scott-media-hub/contact.html">
+
+<!-- Open Graph / social preview -->
+<meta property="og:title" content="Contact — Scott Media Hub">
+<meta property="og:url" content="https://twizeyimanaeric853-cmd.github.io/scott-media-hub/contact.html">
+<meta property="og:description" content="Get in touch with Scott Media Hub.">
+<meta property="og:image" content="https://twizeyimanaeric853-cmd.github.io/scott-media-hub/images/og-image.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Scott Media Hub">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact — Scott Media Hub">
+<meta name="twitter:description" content="Get in touch with Scott Media Hub.">
+<meta name="twitter:image" content="https://twizeyimanaeric853-cmd.github.io/scott-media-hub/images/og-image.png">
+
+<link rel="stylesheet" href="css/styles.css">
+<style>
+  .contact-field { margin-bottom: 20px; }
+  .contact-field label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  .contact-field input,
+  .contact-field textarea {
+    width: 100%;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 14px;
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+  }
+  .contact-field input:focus,
+  .contact-field textarea:focus {
+    border-color: var(--accent-coral);
+    outline: none;
+  }
+  .contact-field textarea { min-height: 140px; resize: vertical; }
+  #formStatus { margin-top: 16px; font-size: 0.9rem; color: var(--accent-yellow); display: none; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="ticker-bar">
+    <div class="ticker-track" id="tickerTrack"></div>
+  </div>
+  <nav class="nav-wrap">
+    <a href="index.html" class="logo">SCOTT<span>MEDIA</span>HUB</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <div id="langSwitcher" style="display:flex; gap:6px; margin-left:12px;"></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+      <li><a href="blog.html" data-i18n="nav_blog">Blog</a></li>
+      <li><a href="videos.html" data-i18n="nav_videos">Videos</a></li>
+      <li><a href="categories.html" data-i18n="nav_categories">Categories</a></li>
+      <li><a href="submit-tip.html" data-i18n="nav_submit_tip">Submit a Tip</a></li>
+      <li><a href="about.html" data-i18n="nav_about">About</a></li>
+      <li><a href="contact.html" class="active" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="page-header">
+  <h1 data-i18n="contact_title">Get In Touch</h1>
+  <p data-i18n="contact_subtitle">Got a story tip, collab idea, or just want to say what's up? Send it over.</p>
+</div>
+
+<section class="section" style="padding-top:24px; max-width: 600px;">
+  <div style="display:flex; gap:14px; flex-wrap:wrap; margin-bottom:40px;">
+    <a href="mailto:twizeyimanaeric853@gmail.com" class="btn btn-secondary" style="flex:1; justify-content:center; min-width:140px;" data-i18n="contact_email">✉ Email</a>
+    <a href="https://wa.me/250798529877" target="_blank" rel="noopener" class="btn btn-secondary" style="flex:1; justify-content:center; min-width:140px;" data-i18n="contact_whatsapp">💬 WhatsApp</a>
+    <a href="https://t.me/ericscott_3" target="_blank" rel="noopener" class="btn btn-secondary" style="flex:1; justify-content:center; min-width:140px;" data-i18n="contact_telegram">✈ Telegram</a>
+  </div>
+
+  <h3 style="font-family:var(--font-display); font-size:1.1rem; margin-bottom:16px;" data-i18n="contact_social_title">Or find us on social</h3>
+  <div id="contactSocial" data-social-bar="44" style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:48px;"></div>
+
+  <div style="border-top:1px solid var(--border); padding-top:40px;">
+    <h3 style="font-family:var(--font-display); font-size:1.1rem; margin-bottom:20px;" data-i18n="contact_form_title">Or send a message directly</h3>
+    <div class="contact-field">
+      <label for="cName" data-i18n="contact_label_name">Name</label>
+      <input type="text" id="cName" placeholder="Your name" data-i18n-placeholder="contact_placeholder_name">
+    </div>
+    <div class="contact-field">
+      <label for="cEmail" data-i18n="contact_label_email">Email</label>
+      <input type="email" id="cEmail" placeholder="you@example.com" data-i18n-placeholder="contact_placeholder_email">
+    </div>
+    <div class="contact-field">
+      <label for="cMessage" data-i18n="contact_label_message">Message</label>
+      <textarea id="cMessage" placeholder="What's on your mind?" data-i18n-placeholder="contact_placeholder_message"></textarea>
+    </div>
+    <button class="btn btn-primary" id="sendBtn" type="button" data-i18n="contact_btn_send">Send Message</button>
+    <p id="formStatus"></p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-wrap">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">SCOTT<span>MEDIA</span>HUB</a>
+      <p data-i18n="footer_tagline">The internet's messiest stories, told right. New videos and blogs dropping all the time.</p>
+      <p style="color:var(--text-muted); font-size:0.85rem; margin-top:8px;" data-i18n="footer_location">📍 Based in Kigali, Rwanda</p>
+      <div id="footerSocial" data-social-bar="36" style="display:flex; gap:10px; margin-top:18px; flex-wrap:wrap;"></div>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4 data-i18n="footer_explore">Explore</h4>
+        <a href="blog.html" data-i18n="nav_blog">Blog</a>
+        <a href="videos.html" data-i18n="nav_videos">Videos</a>
+        <a href="categories.html" data-i18n="nav_categories">Categories</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_site">Site</h4>
+        <a href="submit-tip.html" data-i18n="nav_submit_tip">Submit a Tip</a>
+        <a href="about.html" data-i18n="nav_about">About</a>
+        <a href="contact.html" data-i18n="nav_contact">Contact</a>
+        <a href="privacy.html" data-i18n="nav_privacy">Privacy & Terms</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom container">
+    <p data-i18n="footer_copyright">© 2026 Scott Media Hub. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/translations.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+  // Opens the user's email client pre-filled. Replace the address below
+  // with the real contact email when ready.
+  document.getElementById('sendBtn').addEventListener('click', () => {
+    const name = document.getElementById('cName').value.trim();
+    const email = document.getElementById('cEmail').value.trim();
+    const message = document.getElementById('cMessage').value.trim();
+    const status = document.getElementById('formStatus');
+
+    if (!name || !email || !message) {
+      status.textContent = 'Please fill in all fields before sending.';
+      status.style.display = 'block';
+      return;
+    }
+
+    const subject = encodeURIComponent(`Message from ${name} via Scott Media Hub`);
+    const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
+    window.location.href = `mailto:twizeyimanaeric853@gmail.com?subject=${subject}&body=${body}`;
+
+    status.textContent = 'Opening your email app…';
+    status.style.display = 'block';
+  });
+</script>
+</body>
+</html>

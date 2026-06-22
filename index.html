@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scott Media Hub — Comedy, Drama & Everything In Between</title>
+<meta name="description" content="Scott Media Hub: the latest comedy, drama, music and relationship stories — videos and blogs, no boring takes.">
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="canonical" href="https://twizeyimanaeric853-cmd.github.io/scott-media-hub/">
+
+<!-- Open Graph / social preview -->
+<meta property="og:title" content="Scott Media Hub — Comedy, Drama & Everything In Between">
+<meta property="og:url" content="https://twizeyimanaeric853-cmd.github.io/scott-media-hub/">
+<meta property="og:description" content="Scott Media Hub: the latest comedy, drama, music and relationship stories — videos and blogs, no boring takes.">
+<meta property="og:image" content="https://twizeyimanaeric853-cmd.github.io/scott-media-hub/images/og-image.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Scott Media Hub">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Scott Media Hub — Comedy, Drama & Everything In Between">
+<meta name="twitter:description" content="Scott Media Hub: the latest comedy, drama, music and relationship stories — videos and blogs, no boring takes.">
+<meta name="twitter:image" content="https://twizeyimanaeric853-cmd.github.io/scott-media-hub/images/og-image.png">
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="ticker-bar">
+    <div class="ticker-track" id="tickerTrack">
+      <!-- duplicated via JS for seamless loop -->
+    </div>
+  </div>
+  <nav class="nav-wrap">
+    <a href="index.html" class="logo">SCOTT<span>MEDIA</span>HUB</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <div id="langSwitcher" style="display:flex; gap:6px; margin-left:12px;"></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active" data-i18n="nav_home">Home</a></li>
+      <li><a href="blog.html" data-i18n="nav_blog">Blog</a></li>
+      <li><a href="videos.html" data-i18n="nav_videos">Videos</a></li>
+      <li><a href="categories.html" data-i18n="nav_categories">Categories</a></li>
+      <li><a href="submit-tip.html" data-i18n="nav_submit_tip">Submit a Tip</a></li>
+      <li><a href="about.html" data-i18n="nav_about">About</a></li>
+      <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <span class="hero-eyebrow" data-i18n="hero_eyebrow">● LIVE — FRESH DRAMA DAILY</span>
+  <h1><span data-i18n="hero_title_1">The internet's</span> <em data-i18n="hero_title_2">messiest</em> <span data-i18n="hero_title_3">stories, told right.</span></h1>
+  <p data-i18n="hero_subtitle">Comedy, drama, music and relationship chaos — Scott Media Hub covers what everyone's talking about, before you've even finished your coffee.</p>
+  <div class="hero-actions">
+    <a href="videos.html" class="btn btn-primary" data-i18n="hero_btn_videos">Watch Latest Videos</a>
+    <a href="blog.html" class="btn btn-secondary" data-i18n="hero_btn_blog">Read the Blog</a>
+  </div>
+</section>
+
+<section class="section" id="latest-videos">
+  <div class="section-head">
+    <h2 data-i18n="section_latest_videos">Latest Videos</h2>
+    <a href="videos.html" data-i18n="section_view_all_videos">View all videos →</a>
+  </div>
+  <div class="grid" id="homeVideoGrid">
+    <!-- injected by JS from shared data -->
+  </div>
+</section>
+
+<section class="section" id="latest-blog" style="background:var(--bg-raised); border-radius: 20px;">
+  <div class="section-head">
+    <h2 data-i18n="section_from_blog">From the Blog</h2>
+    <a href="blog.html" data-i18n="section_view_all_posts">View all posts →</a>
+  </div>
+  <div class="grid" id="homeBlogGrid">
+    <!-- injected by JS from shared data -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <h2 data-i18n="section_browse_category">Browse by Category</h2>
+  </div>
+  <div class="cat-filter" style="margin-bottom:0;">
+    <a href="categories.html?cat=comedy" class="cat-pill" style="border-color:var(--cat-comedy); color:var(--cat-comedy);">😂 <span data-i18n="cat_comedy">Comedy</span></a>
+    <a href="categories.html?cat=drama" class="cat-pill" style="border-color:var(--cat-drama); color:var(--cat-drama);">🔥 <span data-i18n="cat_drama">Drama / Gossip</span></a>
+    <a href="categories.html?cat=music" class="cat-pill" style="border-color:var(--cat-music); color:var(--cat-music);">🎵 <span data-i18n="cat_music">Music</span></a>
+    <a href="categories.html?cat=relationships" class="cat-pill" style="border-color:var(--cat-relationships); color:var(--cat-relationships);">💔 <span data-i18n="cat_relationships">Relationships</span></a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-wrap">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">SCOTT<span>MEDIA</span>HUB</a>
+      <p data-i18n="footer_tagline">The internet's messiest stories, told right. New videos and blogs dropping all the time.</p>
+      <p style="color:var(--text-muted); font-size:0.85rem; margin-top:8px;" data-i18n="footer_location">📍 Based in Kigali, Rwanda</p>
+      <div id="footerSocial" data-social-bar="36" style="display:flex; gap:10px; margin-top:18px; flex-wrap:wrap;"></div>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4 data-i18n="footer_explore">Explore</h4>
+        <a href="blog.html" data-i18n="nav_blog">Blog</a>
+        <a href="videos.html" data-i18n="nav_videos">Videos</a>
+        <a href="categories.html" data-i18n="nav_categories">Categories</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_site">Site</h4>
+        <a href="submit-tip.html" data-i18n="nav_submit_tip">Submit a Tip</a>
+        <a href="about.html" data-i18n="nav_about">About</a>
+        <a href="contact.html" data-i18n="nav_contact">Contact</a>
+        <a href="privacy.html" data-i18n="nav_privacy">Privacy & Terms</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom container">
+    <p data-i18n="footer_copyright">© 2026 Scott Media Hub. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/translations.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
