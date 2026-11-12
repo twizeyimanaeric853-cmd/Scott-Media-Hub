@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Submit a Tip — Scott Media Hub</title>
+<meta name="description" content="Got a story tip? Send it to Scott Media Hub.">
+
+<!-- Favicons -->
+<link rel="icon" type="image/jpeg" sizes="32x32" href="images/favicon-32.jpg">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.jpg">
+<link rel="canonical" href="https://twizeyimanaeric853-cmd.github.io/scott-media-hub/submit-tip.html">
+
+<!-- Open Graph / social preview -->
+<meta property="og:title" content="Submit a Tip — Scott Media Hub">
+<meta property="og:url" content="https://twizeyimanaeric853-cmd.github.io/scott-media-hub/submit-tip.html">
+<meta property="og:description" content="Got a story tip? Send it to Scott Media Hub.">
+<meta property="og:image" content="https://twizeyimanaeric853-cmd.github.io/scott-media-hub/images/og-image.jpg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Scott Media Hub">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Submit a Tip — Scott Media Hub">
+<meta name="twitter:description" content="Got a story tip? Send it to Scott Media Hub.">
+<meta name="twitter:image" content="https://twizeyimanaeric853-cmd.github.io/scott-media-hub/images/og-image.jpg">
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="ticker-bar">
+    <div class="ticker-track" id="tickerTrack"></div>
+  </div>
+  <nav class="nav-wrap">
+    <a href="index.html" class="logo">SCOTT<span>MEDIA</span>HUB</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <div id="langSwitcher" style="display:flex; gap:6px; margin-left:12px;"></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+      <li><a href="blog.html" data-i18n="nav_blog">Blog</a></li>
+      <li><a href="videos.html" data-i18n="nav_videos">Videos</a></li>
+      <li><a href="categories.html" data-i18n="nav_categories">Categories</a></li>
+      <li><a href="submit-tip.html" class="active" data-i18n="nav_submit_tip">Submit a Tip</a></li>
+      <li><a href="about.html" data-i18n="nav_about">About</a></li>
+      <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="page-header">
+  <h1 data-i18n="tip_title">Got a Tip? 👀</h1>
+  <p data-i18n="tip_subtitle">Seen something worth covering? Send the story or a link to the clip — if it's good, it could end up on the site.</p>
+</div>
+
+<section class="section" style="padding-top:24px; max-width: 600px;">
+  <p class="disclaimer-box" data-i18n="tip_note">📌 Don't upload files here — just paste a link to your video (YouTube, TikTok, etc.) or describe what happened. Every tip is reviewed before anything is published.</p>
+
+  <div class="contact-field">
+    <label for="tipName"><span data-i18n="tip_label_name">Your Name</span> <span style="color:var(--text-muted); font-weight:400;" data-i18n="tip_hint_optional">(optional)</span></label>
+    <input type="text" id="tipName" placeholder="Stay anonymous or tell us who you are" data-i18n-placeholder="tip_placeholder_name">
+  </div>
+  <div class="contact-field">
+    <label for="tipContact"><span data-i18n="tip_label_contact">Your Email or WhatsApp</span> <span style="color:var(--text-muted); font-weight:400;" data-i18n="tip_hint_followup">(optional, in case we follow up)</span></label>
+    <input type="text" id="tipContact" placeholder="you@example.com or phone number" data-i18n-placeholder="tip_placeholder_contact">
+  </div>
+  <div class="contact-field">
+    <label for="tipLink" data-i18n="tip_label_link">Link to the Clip</label>
+    <input type="url" id="tipLink" placeholder="https://..." data-i18n-placeholder="tip_placeholder_link">
+  </div>
+  <div class="contact-field">
+    <label for="tipDetails" data-i18n="tip_label_details">What's the Story?</label>
+    <textarea id="tipDetails" placeholder="Tell us what happened — who, what, where. The more detail, the better." data-i18n-placeholder="tip_placeholder_details"></textarea>
+  </div>
+  <button class="btn btn-primary" id="sendTipBtn" type="button" data-i18n="tip_btn_send">Send Tip</button>
+  <p id="tipStatus"></p>
+
+  <div style="border-top:1px solid var(--border); margin-top:48px; padding-top:40px;">
+    <h3 style="font-family:var(--font-display); font-size:1.1rem; margin-bottom:20px;" data-i18n="tip_direct_title">Prefer to send it directly?</h3>
+    <div style="display:flex; gap:14px; flex-wrap:wrap;">
+      <a href="mailto:twizeyimanaeric853@gmail.com" class="btn btn-secondary" style="flex:1; justify-content:center; min-width:140px;" data-i18n="contact_email">✉ Email</a>
+      <a href="https://wa.me/250798529877" target="_blank" rel="noopener" class="btn btn-secondary" style="flex:1; justify-content:center; min-width:140px;" data-i18n="contact_whatsapp">💬 WhatsApp</a>
+      <a href="https://t.me/ericscott_3" target="_blank" rel="noopener" class="btn btn-secondary" style="flex:1; justify-content:center; min-width:140px;" data-i18n="contact_telegram">✈ Telegram</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-wrap">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">SCOTT<span>MEDIA</span>HUB</a>
+      <p data-i18n="footer_tagline">The internet's messiest stories, told right. New videos and blogs dropping all the time.</p>
+      <p style="color:var(--text-muted); font-size:0.85rem; margin-top:8px;" data-i18n="footer_location">📍 Based in Kigali, Rwanda</p>
+      <div id="footerSocial" data-social-bar="36" style="display:flex; gap:10px; margin-top:18px; flex-wrap:wrap;"></div>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4 data-i18n="footer_explore">Explore</h4>
+        <a href="blog.html" data-i18n="nav_blog">Blog</a>
+        <a href="videos.html" data-i18n="nav_videos">Videos</a>
+        <a href="categories.html" data-i18n="nav_categories">Categories</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_site">Site</h4>
+        <a href="submit-tip.html" data-i18n="nav_submit_tip">Submit a Tip</a>
+        <a href="about.html" data-i18n="nav_about">About</a>
+        <a href="contact.html" data-i18n="nav_contact">Contact</a>
+        <a href="privacy.html" data-i18n="nav_privacy">Privacy & Terms</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom container">
+    <p data-i18n="footer_copyright">© 2026 Scott Media Hub. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/translations.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script>
+  document.getElementById('sendTipBtn').addEventListener('click', () => {
+    const name = document.getElementById('tipName').value.trim();
+    const contact = document.getElementById('tipContact').value.trim();
+    const link = document.getElementById('tipLink').value.trim();
+    const details = document.getElementById('tipDetails').value.trim();
+    const status = document.getElementById('tipStatus');
+
+    if (!details) {
+      status.textContent = 'Please describe the story before sending.';
+      status.style.display = 'block';
+      return;
+    }
+
+    const subject = encodeURIComponent('Story tip via Scott Media Hub');
+    const body = encodeURIComponent(
+      `${details}\n\nClip link: ${link || 'not provided'}\n\n— ${name || 'Anonymous'}${contact ? ` (${contact})` : ''}`
+    );
+    window.location.href = `mailto:twizeyimanaeric853@gmail.com?subject=${subject}&body=${body}`;
+
+    status.textContent = 'Opening your email app…';
+    status.style.display = 'block';
+  });
+</script>
+</body>
+</html>
