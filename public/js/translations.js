@@ -128,6 +128,12 @@ const TRANSLATIONS = {
 
     // Video card
     watch_youtube: "▶ Watch on YouTube",
+
+    // Blog post page
+    post_back: "← Back to Blog",
+    post_placeholder: "✏ Placeholder — needs real content",
+    post_missing_title: "Post not found",
+    post_missing_text: "This story may have moved or doesn't exist.",
   },
 
   fr: {
@@ -242,6 +248,11 @@ const TRANSLATIONS = {
     notfound_btn_videos: "Voir les Vidéos",
 
     watch_youtube: "▶ Voir sur YouTube",
+
+    post_back: "← Retour au Blog",
+    post_placeholder: "✏ Espace réservé — contenu à compléter",
+    post_missing_title: "Article introuvable",
+    post_missing_text: "Cette histoire a peut-être été déplacée ou n'existe pas.",
   },
 
   rw: {
@@ -356,6 +367,11 @@ const TRANSLATIONS = {
     notfound_btn_videos: "Reba Amashusho",
 
     watch_youtube: "▶ Reba kuri YouTube",
+
+    post_back: "← Subira ku Blog",
+    post_placeholder: "✏ Umwanya wagenewe — hakenewe ibirimo",
+    post_missing_title: "Iyi nkuru ntiboneka",
+    post_missing_text: "Iyi nkuru ishobora kuba yarimutse cyangwa ntibaho.",
   }
 };
 

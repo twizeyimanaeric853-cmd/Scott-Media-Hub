@@ -135,7 +135,7 @@ function videoCardHTML(video) {
 function blogCardHTML(post) {
   const cat = CATEGORY_LABELS[post.category];
   return `
-    <a href="blog.html#${post.id}" class="card">
+    <a href="post.html?id=${post.id}" class="card">
       <div class="card-body" style="padding-top:18px;">
         <span class="tag ${cat.tagClass}">${cat.emoji} ${catLabel(post.category)}</span>
         <h3>${post.title}</h3>
@@ -305,13 +305,3 @@ document.addEventListener('languageChanged', () => {
   if (typeof drawVideos === 'function') drawVideos();
   if (typeof drawBlog === 'function') drawBlog();
 });
-
-// ---- Render: Single blog post page (blog.html#id deep link expand) -------
-(function expandLinkedPost() {
-  const hash = window.location.hash.replace('#', '');
-  if (!hash) return;
-  window.addEventListener('load', () => {
-    const el = document.getElementById(hash);
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-})();

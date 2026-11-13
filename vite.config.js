@@ -10,6 +10,7 @@ export default defineConfig({
         index: page('./index.html'),
         about: page('./about.html'),
         blog: page('./blog.html'),
+        post: page('./post.html'),
         videos: page('./videos.html'),
         categories: page('./categories.html'),
         'submit-tip': page('./submit-tip.html'),
