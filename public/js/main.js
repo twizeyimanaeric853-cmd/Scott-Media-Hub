@@ -113,7 +113,7 @@ function videoCardHTML(video) {
     <a href="${video.url}" target="_blank" rel="noopener" class="card">
       <div class="card-thumb">
         ${thumbUrl ? `<img src="${thumbUrl}" alt="${video.title}" loading="lazy">` : ''}
-        <div class="play-badge-circle"><div class="play-circle"><div style="width:0;height:0;border-left:14px solid var(--bg);border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:3px;"></div></div></div>
+        <div class="play-badge-circle"><div class="play-circle"><span class="play-icon"></span></div></div>
       </div>
       <div class="card-body">
         <span class="tag ${cat.tagClass}">${cat.emoji} ${catLabel(video.category)}</span>

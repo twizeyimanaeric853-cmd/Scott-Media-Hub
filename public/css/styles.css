@@ -273,10 +273,25 @@ h1, h2, h3, h4 { line-height: 1.2; color: var(--text); }
 
 /* Hero */
 .hero {
+  position: relative;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 104px 24px 80px;
   text-align: center;
+  isolation: isolate;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(rgba(212, 175, 55, 0.05) 1px, transparent 1px) 0 0 / 64px 64px,
+    linear-gradient(90deg, rgba(212, 175, 55, 0.05) 1px, transparent 1px) 0 0 / 64px 64px;
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
+  mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
+  pointer-events: none;
 }
 
 .hero > * { animation: fadeUp 0.7s ease backwards; }
@@ -477,14 +492,23 @@ h1, h2, h3, h4 { line-height: 1.2; color: var(--text); }
   height: 60px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--gold-light), var(--gold));
-  box-shadow: var(--gold-glow);
+  box-shadow: 0 0 0 6px rgba(212, 175, 55, 0.14), var(--gold-glow);
   transform: translate(-50%, -50%);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.play-icon {
+  width: 0;
+  height: 0;
+  margin-left: 4px;
+  border-left: 14px solid var(--bg);
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+}
+
 .card:hover .play-circle {
   transform: translate(-50%, -50%) scale(1.1);
-  box-shadow: 0 0 28px rgba(212, 175, 55, 0.55);
+  box-shadow: 0 0 0 10px rgba(212, 175, 55, 0.18), 0 0 28px rgba(212, 175, 55, 0.55);
 }
 
 .card-body {
