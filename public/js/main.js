@@ -54,14 +54,7 @@ function buildLanguageSwitcher() {
     { code: 'rw', label: 'RW' }
   ];
   container.innerHTML = langs.map(l => `
-    <button type="button" data-lang="${l.code}"
-      style="font-family:var(--font-body); font-weight:700; font-size:0.75rem;
-             padding:6px 10px; border-radius:6px; border:1px solid var(--border);
-             background:${currentLang === l.code ? 'var(--text)' : 'transparent'};
-             color:${currentLang === l.code ? 'var(--bg)' : 'var(--text-muted)'};
-             cursor:pointer; transition:all .15s ease;">
-      ${l.label}
-    </button>
+    <button type="button" class="lang-btn${currentLang === l.code ? ' is-active' : ''}" data-lang="${l.code}" aria-pressed="${currentLang === l.code}">${l.label}</button>
   `).join('');
   container.querySelectorAll('button').forEach(btn => {
     btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
