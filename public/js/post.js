@@ -3,6 +3,32 @@
    Reads ?id= from the URL and renders that post from data.js.
    ========================================================================== */
 
+const SITE_PREVIEW_IMAGE_URL = 'https://twizeyimanaeric853-cmd.github.io/scott-media-hub/images/og-preview.jpg';
+
+function setPageMeta(post, image) {
+  const description = post.excerpt;
+  const properties = {
+    'og:title': post.title,
+    'og:description': description,
+    'og:url': window.location.href,
+    'og:image': image.url,
+    'og:image:width': String(image.width),
+    'og:image:height': String(image.height),
+  };
+  const names = {
+    'twitter:title': post.title,
+    'twitter:description': description,
+    'twitter:image': image.url,
+    description,
+  };
+  for (const [key, value] of Object.entries(properties)) {
+    document.querySelector(`meta[property="${key}"]`)?.setAttribute('content', value);
+  }
+  for (const [key, value] of Object.entries(names)) {
+    document.querySelector(`meta[name="${key}"]`)?.setAttribute('content', value);
+  }
+}
+
 function renderPost() {
   const id = new URLSearchParams(window.location.search).get('id');
   const post = typeof BLOG_POSTS !== 'undefined' ? BLOG_POSTS.find(p => p.id === id) : null;
@@ -21,6 +47,9 @@ function renderPost() {
   const ytId = video ? getYouTubeId(video.url) : null;
 
   document.title = `${post.title} — Scott Media Hub`;
+  setPageMeta(post, ytId
+    ? { url: `https://i.ytimg.com/vi/${ytId}/hqdefault.jpg`, width: 480, height: 360 }
+    : { url: SITE_PREVIEW_IMAGE_URL, width: 1200, height: 630 });
   document.getElementById('postTitle').textContent = post.title;
   document.getElementById('postDate').textContent = formatDate(post.date);
 

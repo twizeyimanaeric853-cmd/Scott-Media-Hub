@@ -16,6 +16,8 @@
 <meta property="og:url" content="https://twizeyimanaeric853-cmd.github.io/scott-media-hub/contact.html">
 <meta property="og:description" content="Get in touch with Scott Media Hub.">
 <meta property="og:image" content="https://twizeyimanaeric853-cmd.github.io/scott-media-hub/images/og-preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Scott Media Hub">
 
@@ -88,7 +90,7 @@
 
 <section class="section" style="padding-top:24px; max-width: 600px;">
   <div style="display:flex; gap:14px; flex-wrap:wrap; margin-bottom:40px;">
-    <a href="mailto:twizeyimanaeric853@gmail.com" class="btn btn-secondary" style="flex:1; justify-content:center; min-width:140px;" data-i18n="contact_email">✉ Email</a>
+    <a href="mailto:hubscottmedia@gmail.com" class="btn btn-secondary" style="flex:1; justify-content:center; min-width:140px;" data-i18n="contact_email">✉ Email</a>
     <a href="https://wa.me/250798529877" target="_blank" rel="noopener" class="btn btn-secondary" style="flex:1; justify-content:center; min-width:140px;" data-i18n="contact_whatsapp">💬 WhatsApp</a>
     <a href="https://t.me/ericscott_3" target="_blank" rel="noopener" class="btn btn-secondary" style="flex:1; justify-content:center; min-width:140px;" data-i18n="contact_telegram">✈ Telegram</a>
   </div>
@@ -148,8 +150,7 @@
 <script src="js/data.js"></script>
 <script src="js/main.js"></script>
 <script>
-  // Opens the user's email client pre-filled. Replace the address below
-  // with the real contact email when ready.
+  // Opens the user's email client pre-filled.
   document.getElementById('sendBtn').addEventListener('click', () => {
     const name = document.getElementById('cName').value.trim();
     const email = document.getElementById('cEmail').value.trim();
@@ -164,7 +165,7 @@
 
     const subject = encodeURIComponent(`Message from ${name} via Scott Media Hub`);
     const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
-    window.location.href = `mailto:twizeyimanaeric853@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:hubscottmedia@gmail.com?subject=${subject}&body=${body}`;
 
     status.textContent = 'Opening your email app…';
     status.style.display = 'block';
